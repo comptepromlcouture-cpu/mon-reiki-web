@@ -1,4 +1,4 @@
-# Mon Reiki — prototype personnel
+# Mon Reiki — application personnelle
 
 ## Expérience actuelle
 
@@ -29,7 +29,7 @@ Le compteur se conserve localement dans le navigateur, une journée accomplie au
 - Significations, gestes et formulations à harmoniser avec l'enseignement reçu ; la phrase personnelle est présentée comme une intention du rituel.
 - Antahkaranas Yin/Yang et PDF déjà accessibles dans Apprendre ; fiches explicatives encore provisoires.
 - Navigation tactile et vibration à valider sur un téléphone physique.
-- Aucune publication du site. Le prototype reste accessible localement sur http://127.0.0.1:4173/.
+- L'application est publiée uniquement dans le réseau privé Tailscale d'Olivier ; elle n'est pas exposée sur Internet.
 
 ## Organisation
 
@@ -66,4 +66,4 @@ L'application possède un manifeste, un mode autonome, une icône dédiée et un
 
 L'interface principale et ses illustrations essentielles sont mises en cache pour le hors-ligne. Les musiques, plus lourdes, sont ajoutées au cache après leur première lecture. Une nouvelle version du code remplace automatiquement l'ancien cache au prochain chargement.
 
-Le dépôt GitHub conserve le code et les futures mises à jour, mais ne rend pas à lui seul l'application installable depuis un téléphone : il faudra ensuite choisir un hébergement HTTPS privé ou public.
+Le dépôt GitHub privé conserve le code et les futures mises à jour. L'installation sur téléphone utilise l'hébergement HTTPS privé du Mac mini décrit dans `DEPLOIEMENT-PRIVE.md`.
