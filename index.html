@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f4f3ef">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Mon Reiki">
+  <meta name="description" content="Prototype personnel pour le centrage et la pratique du Reiki.">
+  <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icons/icon-180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="theme-light.css">
+  <link rel="stylesheet" href="theme-watercolor.css">
+  <link rel="stylesheet" href="experience.css">
+  <link rel="stylesheet" href="harmony.css">
+  <link rel="preload" href="assets/fonts/KaushanScript-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <title>Mon Reiki — Prototype personnel</title>
+</head>
+<body class="is-starting">
+  <div class="world-background" aria-hidden="true">
+    <div class="watercolor-wash wash-rose"></div><div class="watercolor-wash wash-lilac"></div>
+    <div class="watercolor-wash wash-gold"></div><div class="paper-grain"></div>
+  </div>
+  <section class="welcome-intro" data-welcome aria-label="Bienvenue dans Mon Reiki">
+    <div class="intro-light" aria-hidden="true"></div>
+    <div class="intro-art" aria-hidden="true"><img src="assets/visuals/meditation-layer-v3.png" alt="" fetchpriority="high"></div>
+    <div class="welcome-copy">
+      <h1 class="brush-title" aria-label="Mon Reiki">
+        <svg viewBox="0 0 500 145" aria-hidden="true" class="calligraphy">
+          <defs>
+            <mask id="write-title" maskUnits="userSpaceOnUse" x="0" y="0" width="500" height="145">
+              <path class="brush-reveal" pathLength="1" d="M 13 124 C 52 106 55 21 77 24 S 104 100 139 81 S 173 29 192 71 S 207 112 220 111 M 250 128 C 278 104 261 26 292 25 S 358 50 314 75 S 354 116 375 69 S 399 30 408 72 S 446 112 473 48" />
+            </mask>
+            <filter id="ink-grain"><feTurbulence type="fractalNoise" baseFrequency=".035 .15" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="1.2"/></filter>
+          </defs>
+          <text x="250" y="105" text-anchor="middle" mask="url(#write-title)" filter="url(#ink-grain)">Mon Reiki</text>
+        </svg>
+      </h1>
+      <p>Juste pour aujourd’hui</p>
+    </div>
+    <button class="entry-orb" type="button" data-enter-app aria-label="Entrer dans Mon Reiki">
+      <span class="orb-rings" aria-hidden="true"></span><span class="orb-label">Entrer</span>
+    </button>
+    <span class="entry-whisper">Un instant pour toi</span>
+    <div class="water-ripples" aria-hidden="true" data-water-ripples></div>
+  </section>
+  <div class="app-shell" inert>
+    <button class="settings-entry" type="button" data-go="settings" aria-label="Ouvrir les paramètres">⚙</button>
+    <main>
+      <section class="screen is-active" data-screen="home" aria-labelledby="home-title">
+        <div class="portal-page">
+          <p class="portal-eyebrow">JUSTE POUR AUJOURD’HUI</p>
+          <h1 id="home-title" tabindex="-1">Mon parcours<br><em>Reiki</em></h1>
+          <div class="journey-art" aria-hidden="true">
+            <svg viewBox="0 0 320 300" class="journey-trail"><path class="trail-under" d="M 161 259 C 78 251 37 218 104 193 S 278 162 213 129 S 67 89 131 68 S 220 42 166 19"/><path class="trail-line" d="M 161 259 C 78 251 37 218 104 193 S 278 162 213 129 S 67 89 131 68 S 220 42 166 19"/><g data-trail-stones></g></svg>
+            <span class="journey-glow"></span>
+          </div>
+          <div class="day-counter"><span>JOUR</span><strong data-current-day>1</strong><span class="day-divider">/</span><span>21</span></div>
+          <p class="portal-caption" data-journey-caption>Un jour après l’autre, à ton rythme.</p>
+          <button class="portal-action" type="button" data-go="practice">Suivre mon programme <span aria-hidden="true">→</span></button>
+        </div>
+      </section>
+      <section class="screen" data-screen="center" aria-labelledby="center-portal-title">
+        <div class="portal-page">
+          <p class="portal-eyebrow">ICI ET MAINTENANT</p>
+          <h1 id="center-portal-title" tabindex="-1">Me <em>centrer</em></h1>
+          <div class="centering-pearl" aria-hidden="true"><i></i></div>
+          <p class="portal-caption">Retrouver le fil de mon souffle.</p>
+          <button class="portal-action" type="button" data-start-centering>Commencer à respirer <span aria-hidden="true">→</span></button>
+        </div>
+      </section>
+      <section class="screen" data-screen="discover" aria-labelledby="discover-title">
+        <div class="portal-page">
+          <p class="portal-eyebrow">UN PEU CHAQUE JOUR</p>
+          <h1 id="discover-title" tabindex="-1">Apprendre<br><em>le Reiki</em></h1>
+          <div class="learning-art" aria-hidden="true"><span class="glass-page page-back"></span><span class="glass-page page-front"><i>心</i></span><img src="assets/visuals/meditation-layer-v3.png" alt=""></div>
+          <p class="portal-caption">Des gestes, des repères, du sens.</p>
+          <button class="portal-action" type="button" data-go="learn">Explorer <span aria-hidden="true">→</span></button>
+        </div>
+      </section>
+      <section class="screen" data-screen="practice" aria-labelledby="practice-title">
+        <div class="detail-top"><button class="back-button" type="button" data-go="home" aria-label="Revenir à mon parcours">←</button><span>Préparer mon soin</span><button class="sound-settings-link" type="button" data-go="settings" aria-label="Paramètres du son">⚙</button></div>
+        <div class="practice-launch">
+          <div class="practice-launch-art" aria-hidden="true" data-pose-art="15"></div>
+          <div class="practice-launch-copy"><p class="eyebrow">Mon rituel</p><h1 id="practice-title">Mon auto-traitement</h1><p>Choisis ta durée, puis laisse-toi guider.</p></div>
+          <div class="practice-settings">
+            <div><span>Durée par position</span><div class="duration-choice" role="group" aria-label="Durée par position"><button class="is-active" type="button" data-treatment-duration="60">1 min</button><button type="button" data-treatment-duration="120">2 min</button><button type="button" data-treatment-duration="180">3 min</button><button type="button" data-treatment-duration="300">5 min</button></div></div>
+          </div>
+          <p class="practice-summary"><strong data-treatment-total>24 min</strong><span>Gasshō · 7 chakras · 14 positions · clôture</span></p>
+          <button class="start-treatment" type="button" data-start-treatment>Commencer mon soin <span>→</span></button>
+        </div>
+      </section>
+
+      <section class="screen" data-screen="learn" aria-labelledby="learn-title">
+        <div class="detail-top"><button class="back-button" type="button" data-go="discover" aria-label="Revenir à Apprendre">←</button><span>Mes repères</span></div>
+        <div class="screen-heading"><p class="eyebrow">À ton rythme</p><h1 id="learn-title">Un geste,<br><em>un peu de sens.</em></h1><p>Choisis ce que tu souhaites explorer.</p></div>
+        <button class="feature-lesson chakras-feature" type="button" data-go="chakras">
+          <img src="assets/visuals/chakra-body-v4.png" alt="Figure lumineuse en méditation"><span><small>RESSENTIR</small><strong>Les 7 chakras</strong><em>Couleurs et repères</em></span><b aria-hidden="true">→</b>
+        </button>
+        <button class="feature-lesson antahkarana-feature" type="button" data-go="antahkarana">
+          <img src="assets/antahkarana/yin.webp" alt="Antahkarana Yin violet et blanc"><span><small>CONTEMPLER</small><strong>Antahkarana</strong><em>Yin, Yang et tes planches</em></span><b aria-hidden="true">→</b>
+        </button>
+        <div class="lesson-grid">
+          <button type="button" data-go="precepts"><span>5</span><strong>5 préceptes</strong><small>Juste pour aujourd'hui</small></button>
+          <button type="button" data-go="gassho"><span>◇</span><strong>Gasshō</strong><small>Se recueillir</small></button>
+          <button type="button" data-go="positions"><span>手</span><strong>Les positions</strong><small>14 gestes illustrés</small></button>
+          <button type="button" data-go="closing"><span>∞</span><strong>Refermer le soin</strong><small>Kenyoku et clôture</small></button>
+        </div>
+        <button class="future-lesson" type="button" data-go="mudras"><span class="hand-mark" aria-hidden="true">◌</span><span><small>À EXPLORER</small><strong>Mudras & sons</strong><em>Le langage des mains</em></span><b aria-hidden="true">→</b></button>
+      </section>
+
+      <section class="screen detail-screen" data-screen="chakras" aria-labelledby="chakras-title">
+        <div class="detail-top"><button class="back-button" type="button" data-back aria-label="Retour">←</button><span>Guide visuel</span></div>
+        <div class="chakra-hero">
+          <figure class="learning-chakra" data-learning-chakra aria-label="Emplacement du chakra sélectionné"></figure>
+          <div><p class="eyebrow">Tes repères</p><h1 id="chakras-title">Les 7 chakras</h1><p>Couleur, position et intention symbolique.</p></div>
+        </div>
+        <p class="source-note">Des repères symboliques d’après ta planche, à relier à ton enseignement.</p>
+        <div class="chakra-cards">
+          <button type="button" data-chakra="6" style="--chakra:#9b46d4"><img src="assets/chakras/07-coronal.webp" alt="Symbole du chakra coronal"><span><small>VIOLET · SOMMET DU CRÂNE</small><strong>Sahasrara · Coronal</strong><em>Je sais · conscience et lien spirituel</em></span></button>
+          <button type="button" data-chakra="5" style="--chakra:#6737c6"><img src="assets/chakras/06-troisieme-oeil.webp" alt="Symbole du chakra du troisième œil"><span><small>INDIGO · ENTRE LES SOURCILS</small><strong>Ajna · Troisième œil</strong><em>Je vois · intuition et discernement</em></span></button>
+          <button type="button" data-chakra="4" style="--chakra:#3978d2"><img src="assets/chakras/05-gorge.webp" alt="Symbole du chakra de la gorge"><span><small>BLEU · GORGE</small><strong>Vishuddha · Gorge</strong><em>J'exprime · parole et écoute</em></span></button>
+          <button type="button" data-chakra="3" style="--chakra:#32d14c"><img src="assets/chakras/04-coeur.webp" alt="Symbole du chakra du cœur"><span><small>VERT · CENTRE DE LA POITRINE</small><strong>Anahata · Cœur</strong><em>J'aime · compassion et relation</em></span></button>
+          <button type="button" data-chakra="2" style="--chakra:#e0cf24"><img src="assets/chakras/03-plexus.webp" alt="Symbole du chakra du plexus solaire"><span><small>JAUNE · PLEXUS SOLAIRE</small><strong>Manipura · Plexus</strong><em>Je rayonne · action et confiance</em></span></button>
+          <button type="button" data-chakra="1" style="--chakra:#df8428"><img src="assets/chakras/02-sacre.webp" alt="Symbole du chakra sacré"><span><small>ORANGE · BAS-VENTRE</small><strong>Svadhisthana · Sacré</strong><em>Je ressens · émotions et créativité</em></span></button>
+          <button type="button" data-chakra="0" style="--chakra:#d83232"><img src="assets/chakras/01-racine.webp" alt="Symbole du chakra racine"><span><small>ROUGE · BASE DU BASSIN</small><strong>Muladhara · Racine</strong><em>Je suis · ancrage et sécurité</em></span></button>
+        </div>
+      </section>
+
+      <section class="screen detail-screen" data-screen="antahkarana" aria-labelledby="antahkarana-title">
+        <div class="detail-top"><button class="back-button" type="button" data-back aria-label="Retour">←</button><span>Planches personnelles</span></div>
+        <div class="screen-heading"><p class="eyebrow">Symboles fournis</p><h1 id="antahkarana-title">Antahkarana</h1><p>Les formes réelles de ton document, sans redessin ni interprétation ajoutée.</p></div>
+        <div class="antahkarana-pair">
+          <article><img src="assets/antahkarana/yin.webp" alt="Antahkarana Yin"><span>YIN</span><h2>Forme Yin</h2><p>Forme large issue de la première planche.</p></article>
+          <article><img src="assets/antahkarana/yang.webp" alt="Antahkarana Yang"><span>YANG</span><h2>Forme Yang</h2><p>Forme large issue de la cinquième planche.</p></article>
+        </div>
+        <article class="pending-guide"><span>À documenter</span><h2>Comment et pourquoi l'utiliser ?</h2><p>Cette partie sera rédigée uniquement à partir de ta formation ou d'une source identifiée. Le prototype n'invente pas d'usage.</p></article>
+        <a class="pdf-link" href="assets/antahkarana/antahkaranas-a4.pdf" target="_blank" rel="noopener">Ouvrir les 24 planches A4 <span>↗</span></a>
+      </section>
+
+      <section class="screen detail-screen" data-screen="precepts" aria-labelledby="precepts-title">
+        <div class="detail-top"><button class="back-button" type="button" data-back aria-label="Retour">←</button><span>Fondation</span></div>
+        <div class="screen-heading"><p class="eyebrow">Juste pour aujourd'hui</p><h1 id="precepts-title">Les 5 préceptes</h1><p>Une lecture sobre avant le soin.</p></div>
+        <div class="precepts">
+          <article><span>01</span><p>Je laisse la colère s'apaiser.</p></article>
+          <article><span>02</span><p>Je laisse les soucis s'apaiser.</p></article>
+          <article><span>03</span><p>Je cultive la gratitude.</p></article>
+          <article><span>04</span><p>J'accomplis mon travail honnêtement.</p></article>
+          <article><span>05</span><p>Je suis bienveillant envers les êtres vivants.</p></article>
+        </div>
+        <p class="source-note">Formulation provisoire à remplacer par celle transmise lors de ton initiation.</p>
+      </section>
+      <section class="screen detail-screen" data-screen="gassho" aria-labelledby="gassho-title">
+        <div class="detail-top"><button class="back-button" type="button" data-back aria-label="Retour">←</button><span>Se recueillir</span></div>
+        <div class="screen-heading"><p class="eyebrow">Le premier geste</p><h1 id="gassho-title">Gasshō</h1><p>Un instant pour revenir à toi.</p></div>
+        <div class="learning-pose" data-pose-art="15"></div>
+        <div class="quiet-notes"><p>Joins doucement les paumes devant le cœur.</p><p>Laisse les épaules se relâcher. Respire naturellement.</p><p>Dans ton parcours : 1 minute, les 5 préceptes et ta phrase d’ouverture.</p></div>
+        <button class="quiet-link" type="button" data-go="precepts">Lire les 5 préceptes <span>→</span></button>
+      </section>
+      <section class="screen detail-screen" data-screen="positions" aria-labelledby="positions-title">
+        <div class="detail-top"><button class="back-button" type="button" data-back aria-label="Retour">←</button><span>Observer le geste</span></div>
+        <div class="screen-heading"><p class="eyebrow">Auto-traitement</p><h1 id="positions-title">Les positions</h1><p>Sans minuteur. Prends le temps de regarder.</p></div>
+        <div class="learning-pose" data-position-preview></div>
+        <div class="position-caption" aria-live="polite"><small data-position-count>1 / 14</small><h2 data-position-name>Yeux</h2><p data-position-description>Paumes posées sur les yeux</p></div>
+        <div class="position-navigation"><button type="button" data-position-prev aria-label="Position précédente">←</button><button type="button" data-position-next aria-label="Position suivante">→</button></div>
+        <p class="source-note">Illustrations de ta nouvelle planche. Pose les mains sans pression ; adapte les gestes à ton confort et à ta formation.</p>
+      </section>
+      <section class="screen detail-screen" data-screen="closing" aria-labelledby="closing-title">
+        <div class="detail-top"><button class="back-button" type="button" data-back aria-label="Retour">←</button><span>Terminer doucement</span></div>
+        <div class="screen-heading"><p class="eyebrow">Ton rituel</p><h1 id="closing-title">Refermer le soin</h1><p>Les repères que tu as transmis.</p></div>
+        <ol class="closing-guide"><li><span>3×</span><div><h2>Le 8 ou « cacahuète »</h2><p>Réalise ton geste trois fois.</p></div></li><li><span>2×</span><div><h2>Remonter les énergies</h2><p>Deux fois, puis le nœud à la fin.</p></div></li><li><span>3×</span><div><h2>Lisser l’aura</h2><p>Trois passages selon ton enseignement.</p></div></li><li><span>◇</span><div><h2>Kenyoku</h2><p>« Ce qui est à toi est à toi ; ce qui est à moi reste à moi. »</p></div></li><li><span>✓</span><div><h2>Lavage</h2><p>Les mains et les avant-bras.</p></div></li></ol>
+        <p class="source-note">Aide-mémoire personnel : les gestes précis restent à revoir avec ton enseignant.</p>
+      </section>
+      <section class="screen detail-screen" data-screen="mudras" aria-labelledby="mudras-title">
+        <div class="detail-top"><button class="back-button" type="button" data-back aria-label="Retour">←</button><span>Pour plus tard</span></div>
+        <div class="screen-heading"><p class="eyebrow">À explorer</p><h1 id="mudras-title">Mudras <em>& sons</em></h1><p>Des gestes pour accompagner la méditation.</p></div>
+        <div class="mudra-art" aria-hidden="true"><svg viewBox="310 163 449 154"><defs><filter id="mudra-paper" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 -1 0 1"/></filter></defs><image href="assets/learning/mudras-reference.jpg" width="1080" height="1350" filter="url(#mudra-paper)"/></svg></div>
+        <div class="quiet-notes"><h2>Un premier geste</h2><p>Installe-toi confortablement, les mains posées sur les genoux.</p><p>Laisse le pouce et l’index se rejoindre doucement. Les autres doigts restent détendus.</p><p>Prends quelques respirations naturelles, sans serrer les doigts. Relâche les mains quand tu le souhaites.</p><h2>Et les sons ?</h2><p>Les syllabes de ta planche sont des repères de méditation. Tu peux commencer simplement en silence ; les associations aux chakras dépendent de l’enseignement suivi.</p></div>
+        <details class="reference-sheet"><summary>Voir ta planche complète <span>＋</span></summary><img src="assets/learning/mudras-reference.jpg" alt="Planche fournie : gestes des mains, sept chakras et syllabes LAM, VAM, RAM, YAM, HAM, AUM et AAH. Associations à confirmer selon l’enseignement. Auteur indiqué : mybouddha.com." loading="lazy"></details>
+        <p class="source-note">Un repère méditatif à adapter à ton enseignement. Ce geste reste en dehors de ton parcours de soin.</p>
+      </section>
+      <section class="screen detail-screen" data-screen="settings" aria-labelledby="settings-title">
+        <div class="detail-top"><button class="back-button" type="button" data-back aria-label="Fermer les paramètres">←</button><span>Mon espace sonore</span></div>
+        <div class="screen-heading"><p class="eyebrow">Paramètres</p><h1 id="settings-title">Une ambiance<br><em>à toi.</em></h1><p>Choisis ton paysage sonore.</p></div>
+        <div class="music-grid" data-music-grid role="group" aria-label="Musique d’ambiance"></div>
+        <button class="silence-choice" type="button" data-music-select="silence" aria-pressed="false">Un moment de silence <span>○</span></button>
+        <p class="loop-caption">La musique se répète jusqu’à la fin de ta séance.</p>
+        <div class="sound-volume"><label for="music-volume">Musique <output data-music-volume>35 %</output></label><input id="music-volume" type="range" min="0" max="100" step="5" value="35"></div>
+        <section class="bowl-setting" aria-labelledby="bowl-title"><div class="bowl-art" aria-hidden="true"><i></i></div><div><p class="eyebrow">Entre les gestes</p><h2 id="bowl-title">Bol tibétain</h2><p>Frappe 2 · résonance naturelle</p></div><button type="button" class="sound-preview" data-preview-bowl aria-label="Écouter le bol tibétain" aria-pressed="false">▷</button></section>
+        <div class="sound-volume"><label for="bowl-volume">Bol <output data-bowl-volume>60 %</output></label><input id="bowl-volume" type="range" min="0" max="100" step="5" value="60"></div>
+        <p class="audio-status" data-audio-status role="status">Tes choix sont enregistrés automatiquement.</p>
+        <section class="install-setting" aria-labelledby="install-title"><div class="install-icon"><img src="assets/icons/icon-192.png" alt=""></div><div><p class="eyebrow">Sur ton téléphone</p><h2 id="install-title">Installer Mon Reiki</h2><p data-install-help>Ajoute l’application à ton écran d’accueil pour l’ouvrir en plein écran.</p></div><button type="button" data-install-app hidden>Installer</button></section>
+      </section>
+    </main>
+
+    <nav class="swipe-guide" aria-label="Découvrir les autres espaces">
+      <button type="button" data-page-prev aria-label="Espace précédent">‹</button>
+      <div aria-hidden="true"><i></i><i></i><i></i></div>
+      <button type="button" data-page-next aria-label="Espace suivant">›</button>
+      <small>Glisser pour explorer</small>
+    </nav>
+  </div>
+
+  <section class="centering-mode" hidden aria-labelledby="centering-title">
+    <header><button type="button" data-close-centering aria-label="Fermer le mode centrage">×</button><span id="centering-title">MODE CENTRAGE</span><button type="button" data-mute-centering aria-label="Couper le son">♪</button></header>
+    <div class="centering-content">
+      <p class="centering-timer" data-center-timer>03:00</p>
+      <div class="breathing-guide" aria-hidden="true"><span class="breath-halo h1"></span><span class="breath-halo h2"></span><span class="breath-core"></span></div>
+      <p class="breathing-label" data-breath-label>Inspire doucement</p><p class="breathing-count" data-breath-count>5</p>
+      <div class="personal-cues" aria-label="Repères personnels"><span>Yeux à droite</span><span>Langue à gauche</span><span>Respiration longue</span><span>Pieds au sol</span></div>
+      <button class="pause-centering" type="button" data-pause-centering>Pause</button>
+      <small class="centering-help">Suis le rythme sans forcer. Tu peux arrêter à tout moment.</small>
+    </div>
+  </section>
+
+  <section class="treatment-session" hidden aria-labelledby="treatment-title">
+    <header><button type="button" data-close-treatment aria-label="Quitter le soin">×</button><span data-treatment-phase>OUVERTURE</span><button type="button" data-mute-treatment aria-label="Couper le son">♪</button></header>
+    <div class="treatment-progress" aria-hidden="true"><span data-treatment-progress></span></div>
+    <div class="treatment-stage">
+      <p class="treatment-step" data-treatment-step>ÉTAPE 1 SUR 27</p>
+      <div class="treatment-visual" data-treatment-visual></div>
+      <div class="treatment-copy"><h1 id="treatment-title" data-treatment-title>Gasshō</h1><p data-treatment-copy>Réunis les mains et reviens au moment présent.</p></div>
+      <div class="treatment-timer" aria-label="Temps restant"><span data-treatment-timer>01:00</span><i aria-hidden="true"></i></div>
+      <div class="treatment-actions"><button type="button" data-treatment-pause>Pause</button><button type="button" data-treatment-next>Étape suivante <span>→</span></button></div>
+    </div>
+  </section>
+  <audio id="ambient-audio" loop preload="none"></audio>
+  <audio id="bowl-audio" preload="none" src="assets/audio/bol-tibetain-2553.wav"></audio>
+  <audio id="preview-audio" preload="none"></audio>
+
+  <div class="note-toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
