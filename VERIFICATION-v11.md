@@ -6,5 +6,8 @@ Date : 12 octobre 2026
 - Seuls les fichiers utiles à l'application sont placés dans l'artefact du site.
 - Le manifeste, le service worker et tous les chemins restent relatifs pour fonctionner sous `/mon-reiki-app/`.
 - L'ancien mode d'accès privé Tailscale n'est plus nécessaire pour l'utilisateur.
+- GitHub Pages est réellement activé en HTTPS sur `https://comptepromlcouture-cpu.github.io/mon-reiki-web/`.
+- La page, le manifeste, le service worker, l'icône et le son du bol répondent en HTTP 200.
+- Contrôle navigateur réel : titre « Mon Reiki », manifeste, icône Apple, script versionné et aide d'installation présents, sans erreur console.
 
-La publication et l'URL publique doivent être contrôlées après l'exécution réelle du workflow GitHub Actions.
+Le dernier contrôle restant est l'installation physique depuis le menu du navigateur du téléphone.

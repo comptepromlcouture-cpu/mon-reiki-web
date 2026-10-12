@@ -2,7 +2,7 @@
 
 L'application est publiée automatiquement depuis la branche `main` par GitHub Actions.
 
-Adresse : `https://comptepromlcouture-cpu.github.io/mon-reiki-app/`
+Adresse : `https://comptepromlcouture-cpu.github.io/mon-reiki-web/`
 
 Chaque mise à jour validée puis envoyée sur `main` relance le déploiement. Le dépôt reste la source de travail ; l'utilisateur ouvre uniquement l'adresse web normale dans Chrome ou Safari.
 
