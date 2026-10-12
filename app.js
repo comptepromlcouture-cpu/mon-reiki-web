@@ -435,7 +435,7 @@ installButton.addEventListener('click', async () => {
   installPrompt.prompt(); await installPrompt.userChoice; installPrompt = null; updateInstallUI();
 });
 updateInstallUI();
-if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js').catch(() => showNote('Le mode hors ligne sera disponible après la prochaine ouverture.')));
+if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js?v=10').then(registration => registration.update()).catch(() => showNote('Le mode hors ligne sera disponible après la prochaine ouverture.')));
 
 document.querySelector('[data-learning-chakra]').innerHTML = treatmentVisualMarkup({type:'chakra',chakra:chakras[0]}) + '<figcaption>Chakra racine · Je suis</figcaption>';
 document.querySelectorAll('[data-chakra]').forEach(item=>item.setAttribute('aria-pressed',String(item.dataset.chakra==='0')));

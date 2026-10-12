@@ -9,5 +9,6 @@ Date : 12 octobre 2026
 - Page, manifeste, service worker, icône 192 px et son du bol répondent en HTTP 200 via HTTPS.
 - Certificat Let's Encrypt valide pour `macmini-olivier.tail9ef6d6.ts.net`.
 - Chargement réel dans Chromium : titre, manifeste, icône Apple et aide d'installation présents ; aucune erreur ni aucun avertissement console.
+- Les navigations utilisent désormais le réseau en priorité et l'enregistrement du service worker force un contrôle de mise à jour ; une nouvelle version ne reste plus bloquée derrière l'ancien cache.
 
 Reste à confirmer sur le téléphone physique : activation de Tailscale, ouverture de l'adresse et installation depuis le menu Chrome.
